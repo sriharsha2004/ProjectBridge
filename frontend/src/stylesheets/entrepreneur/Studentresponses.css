@@ -1,0 +1,64 @@
+/* Ideas.css */
+
+.ideas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.idea-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.idea-item img {
+    width:200px;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+    border-radius: 5px;
+}
+
+.idea-details {
+    overflow: hidden;
+}
+
+.idea-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.idea-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.idea-details strong {
+    font-weight: bold;
+}
+
+.error-message {
+    color: #f00;
+}
+
+.pending-message {
+    color: #007bff;
+}
+
+.idea-details button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}

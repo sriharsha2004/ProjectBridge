@@ -1,0 +1,53 @@
+/* Ideas.css */
+
+.ties-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tie-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tie-item img {
+    width:200px;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+    border-radius: 5px;
+}
+
+.tie-details {
+    overflow: hidden;
+}
+
+.tie-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.tie-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.tie-details strong {
+    font-weight: bold;
+}
+
+.error-message {
+    color: #f00;
+}
+
+.pending-message {
+    color: #007bff;
+}

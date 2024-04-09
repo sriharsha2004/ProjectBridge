@@ -1,0 +1,92 @@
+.signin-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .signin-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .signin-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signin-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .signin-container form label {
+    font-weight: bold;
+  }
+  
+  .signin-container form input[type="email"],
+  .signin-container form input[type="password"],
+  .signin-container form input[type="text"],
+  .signin-container form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signin-container form select{
+    margin-bottom: 20px;
+  }
+
+  .signin-container form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-container form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .signin-container .error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .signin-container .pending-message {
+    color: #007bff;
+    margin-top: 10px;
+    text-align: center;
+  }
+  /* #showpwd {
+    position: absolute;
+    top: 270px;
+    right: 430px;
+  } */
+
+  #eyesection{
+    display: flex;
+    
+  }
+  #showpwd{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  #forget{
+    float: right;
+    color: rgb(5, 5, 236);
+    cursor: pointer;
+  }
