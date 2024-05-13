@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import useFetchpost from "../hooks/useFetchpost"
 import Navbar from './navbar';
 
@@ -36,11 +36,16 @@ function Signup() {
   }
 
   var validatepassword = () =>{
-    if (password.length < 5) setvalpassword(true);
+    if (password.length < 4) setvalpassword(true);
     else if (!/[A-Z]/.test(password)) setvalpassword(true);
     else if (!/[!@#$%^&*?]/.test(password)) setvalpassword(true);
     else setvalpassword(false);
+    console.log(valpassword);
   }
+
+  useEffect(() => {
+    console.log(valpassword);
+  }, [valpassword]);
 
   var validateConfirmpassword = (pwd) =>{
     setcpass(pwd !== password);
@@ -88,6 +93,7 @@ function Signup() {
           </div>
             {cpass && <small id='wrong'>Password did not match</small> }
             {cpass && valpassword && <br></br>}
+            {console.log(valpassword)}
           {valpassword && <small id='wrong'>Password must have atleast one Uppercase letter , minimum of length 5 and must have a special character !@#$%^&*?</small> }
         </div>
         <div>

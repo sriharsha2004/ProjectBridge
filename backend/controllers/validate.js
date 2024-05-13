@@ -31,7 +31,7 @@ var signin = (req, res) => {
                         res.json("Internal Server Error");
                     } else {
                         if (isvalid){
-                            const token = jwt.sign({ mail: req.body.mailId , role : req.body.role}, process.env.JWT_SECRET, { expiresIn: '300s' });
+                            const token = jwt.sign({ mail: req.body.mailId , role : req.body.role}, process.env.JWT_SECRET, { expiresIn: '3600s' });
                             res.json({"token" : token , msg : "Succesfully"})
                             // res.json("Succesfully");
                         }

@@ -23,6 +23,8 @@ const Investorpostform = () => {
     const [cost,setcost] = useState("");
     const [image, setImage] = useState(null);
 
+    const [showimage,setshowimage] = useState("https://media.licdn.com/dms/image/C4E12AQG2pj4JkZG0Yw/article-cover_image-shrink_600_2000/0/1520115601955?e=2147483647&v=beta&t=15dJ3ErnJfshcaCF1pn0x_PZO4-UeIeYayT1JR_1HY8");
+
     const location = useLocation();
 
     const [getToken,tokendata] = UseGetToken();
@@ -134,9 +136,18 @@ const Investorpostform = () => {
                     </div>
                     <div>
                         <label>Image:</label>
-                        <input type="file" onChange={(e) => setImage(e.target.files[0])} accept="image/*" />
+                        <input type="file" onChange={(e) =>{ 
+                            setImage(e.target.files[0])
+                            const file = e.target.files[0];
+                            const reader = new FileReader();
+                            reader.readAsDataURL(file);
+                            reader.onload = () => {
+                                setshowimage(reader.result);
+                            };
+                            }} accept="image/*" />
                         <button onClick={StoreImage} >Upload</button>
                     </div>
+                    <img src={showimage} alt="" width="300" height="200"/>
                     <button type="submit">Submit</button>
                 </form>
             </div>

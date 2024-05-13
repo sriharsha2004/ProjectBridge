@@ -54,6 +54,10 @@
     margin-top: 10px;
 }
 
+.project-details #viewer{
+    float: right;
+}
+
 .project-details button:hover {
     background-color: #0056b3;
 }
