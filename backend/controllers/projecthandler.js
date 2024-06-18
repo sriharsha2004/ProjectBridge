@@ -1,7 +1,7 @@
 const model = require("../models/ProjectsSchema");
 
 var getAllprojects = (req,res) =>{
-    model.find({})
+    model.find({}).sort({createdAt : -1})
     .then((data)=>{
         console.log(req.user);
         res.json({data : data , mail : req.user.mail});
@@ -13,7 +13,7 @@ var getAllprojects = (req,res) =>{
 }
 
 var getprojectsWithmail = (req,res) =>{
-    model.find({mailId : req.params.mail})
+    model.find({mailId : req.params.mail}).sort({createdAt : -1})
     .then((data)=>{
         res.json(data);
     })

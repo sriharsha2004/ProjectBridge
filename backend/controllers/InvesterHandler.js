@@ -1,7 +1,7 @@
 const model = require("../models/InvestorSchema");
 
 var getAllinvestoppor = (req,res) =>{
-    model.find({investormail : req.params.mail})
+    model.find({investormail : req.params.mail}).sort({createdAt : -1})
     .then((data)=>{
         res.json(data);
     })
@@ -21,7 +21,7 @@ var updatestatus = (req,res) =>{
 }
 
 var getAllstudents = (req,res) =>{
-    model.find({studentmail : req.params.mail})
+    model.find({studentmail : req.params.mail}).sort({createdAt : -1})
     .then((data)=>{
         res.json(data);
     })

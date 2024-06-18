@@ -14,7 +14,7 @@ var uploadIdea = (req,res) =>{
 
 const getIdeas = (req, res) => {
     const  mailId  = req.params.mail;
-    model.find({ smailId : mailId })
+    model.find({ smailId : mailId }).sort({createdAt : -1})
         .then(ideas => {
             console.log(ideas);
             res.json(ideas)
@@ -26,7 +26,7 @@ const getIdeas = (req, res) => {
 };
 
 var getIdeasformail = (req,res) =>{
-    model.find({mailId : req.params.mail})
+    model.find({mailId : req.params.mail}).sort({createdAt : -1})
     .then(ideas => {
         res.json(ideas)
     })

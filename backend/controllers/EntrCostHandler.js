@@ -12,7 +12,7 @@ var postcosttoInv = (req,res) => {
 }
 
 var getAllAppeals = (req,res) =>{
-    model.find({Entrmail : req.params.mail})
+    model.find({Entrmail : req.params.mail}).sort({createdAt : -1})
     .then((data)=>{
         res.json(data);
     })
